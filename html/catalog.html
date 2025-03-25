@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de teléfonos de segunda mano. Filtra por marca, precio y estado para encontrar el dispositivo perfecto.">
+  <title>Catálogo - Teléfonos de Segunda Mano</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Teléfonos</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalog.html">Catálogo</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="profile.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Buscar Teléfonos</h2>
+      <form action="catalog.html" method="get">
+        <input type="text" name="busqueda" placeholder="Buscar por marca o modelo">
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+    <section>
+      <h2>Listado de Productos</h2>
+      <article>
+        <h3>Modelo A</h3>
+        <p>Precio: $200</p>
+        <a href="product-detail.html?id=1">Ver detalles</a>
+      </article>
+      <article>
+        <h3>Modelo B</h3>
+        <p>Precio: $250</p>
+        <a href="product-detail.html?id=2">Ver detalles</a>
+      </article>
+      <!-- Puedes agregar más artículos aquí -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Teléfonos de Segunda Mano. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
