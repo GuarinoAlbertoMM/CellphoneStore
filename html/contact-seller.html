@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta al vendedor para obtener más información sobre el teléfono en venta.">
+  <title>Contactar al Vendedor - Teléfonos de Segunda Mano</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Contactar al Vendedor</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalog.html">Catálogo</a></li>
+        <li><a href="profile.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Envía un mensaje al vendedor</h2>
+      <p>Completa el siguiente formulario para ponerte en contacto con el vendedor sobre este producto.</p>
+      
+      <form action="procesar-contacto.php" method="post">
+        <label for="nombre">Tu Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Tu Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Teléfonos de Segunda Mano. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

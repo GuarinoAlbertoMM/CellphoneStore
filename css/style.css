@@ -5,3 +5,34 @@ img {
     height: auto;
     border-radius: 10px;
 }
+
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
