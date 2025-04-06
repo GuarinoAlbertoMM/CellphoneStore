@@ -1,36 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detalle completo del teléfono seleccionado. Especificaciones, imágenes y contacto para la compra.">
-  <title>Detalle del Producto - Teléfonos de Segunda Mano</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <style>
+        /* CSS Similar to the previous pages */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .product-detail-section {
+            padding: 20px;
+        }
+        .product-name {
+            font-size: 2rem;
+            color: #333;
+        }
+        .product-description {
+            color: #777;
+        }
+        .product-price {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Detalle del Producto</h1>
+    <header>
+        <h1>Detalles del Producto</h1>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalog.html">Catálogo</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="profile.html">Perfil</a></li>
-      </ul>
+        <a href="index.html">Inicio</a>
+        <a href="catalog.html">Catálogo</a>
+        <a href="contact-seller.html">Contacto Vendedor</a>
+        <a href="login.html">Iniciar Sesión</a>
     </nav>
-  </header>
-  <main>
-    <article>
-      <h2>Modelo A</h2>
-      <img src="img/modeloA.jpg" alt="Imagen del Modelo A">
-      <p>Descripción detallada del teléfono: características, especificaciones y estado.</p>
-      <p>Precio: $200</p>
-      <a href="contact-seller.html">Contactar al vendedor</a>
-    </article>
-  </main>
-  <footer>
-    <p>&copy; 2025 Teléfonos de Segunda Mano. Todos los derechos reservados.</p>
-  </footer>
-  <script src="js/script.js"></script>
+
+    <section class="product-detail-section">
+        <h2 class="product-name">Producto 1</h2>
+        <img src="product-image.jpg" alt="Imagen del Producto" class="product-image">
+        <p class="product-description">Detalles completos del producto.</p>
+        <p class="product-price">$500</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Tienda de Celulares</p>
+    </footer>
 </body>
 </html>

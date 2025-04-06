@@ -1,47 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contacta al vendedor para obtener más información sobre el teléfono en venta.">
-  <title>Contactar al Vendedor - Teléfonos de Segunda Mano</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactar Vendedor</title>
+    <style>
+        /* CSS Similar to the previous page */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .contact-form-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .form-title {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Contactar al Vendedor</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalog.html">Catálogo</a></li>
-        <li><a href="profile.html">Perfil</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <section>
-      <h2>Envía un mensaje al vendedor</h2>
-      <p>Completa el siguiente formulario para ponerte en contacto con el vendedor sobre este producto.</p>
-      
-      <form action="procesar-contacto.php" method="post">
-        <label for="nombre">Tu Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        
-        <label for="email">Tu Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-        
-        <button type="submit">Enviar Mensaje</button>
-      </form>
-    </section>
-  </main>
+    <header>
+        <h1>Contacto con el Vendedor</h1>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 Teléfonos de Segunda Mano. Todos los derechos reservados.</p>
-  </footer>
-  <script src="js/script.js"></script>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalog.html">Catálogo</a>
+        <a href="contact-seller.html">Contacto Vendedor</a>
+        <a href="login.html">Iniciar Sesión</a>
+    </nav>
+
+    <section class="contact-form-section">
+        <h2 class="form-title">Envíanos un mensaje</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Correo Electrónico" required>
+            <textarea placeholder="Escribe tu mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Tienda de Celulares</p>
+    </footer>
 </body>
 </html>

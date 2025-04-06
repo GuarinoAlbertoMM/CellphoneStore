@@ -1,46 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compra y venta de teléfonos de segunda mano. Descubre dispositivos de calidad a precios accesibles.">
-  <title>Inicio - Teléfonos de Segunda Mano</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Tienda de Celulares</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .product-section {
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .product-description {
+            color: #777;
+        }
+
+        .product-price {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        .footer-text {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Teléfonos de Segunda Mano</h1>
+    <header>
+        <h1 class="header-title">Bienvenido a la Tienda de Celulares</h1>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalog.html">Catálogo</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="profile.html">Perfil</a></li>
-      </ul>
+        <a href="#" class="nav-link">Inicio</a>
+        <a href="catalog.html" class="nav-link">Productos</a>
+        <a href="contact-seller.html" class="nav-link">Contacto</a>
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="product-detail.html" class="nav-link">Detalles del producto</a>
+        <a href="profile.html" class="nav-link">Perfil</a>
     </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Bienvenido</h2>
-      <p>Explora y encuentra el teléfono ideal usado, revisado y a un precio competitivo.</p>
+
+    <section id="productos" class="product-section">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="/img/galaxys24.png" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Samsung Galaxy S24</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$39,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/galaxys24-ultra.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Samsung Galaxy S24 Ultra</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$59,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/iphone15.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">IPhone 15</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$49,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/iphone15-promax.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">IPhone 15 Pro Max</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$69,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/pixel7pro.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Pixel 7 Pro</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$59,999.99</p>
+                </div>
+            </div>
+        </div>
+        
     </section>
-    <section>
-      <h2>Teléfonos Destacados</h2>
-      <article>
-        <h3>Modelo A</h3>
-        <p>Descripción breve del Modelo A.</p>
-        <a href="product-detail.html?id=1">Ver más</a>
-      </article>
-      <article>
-        <h3>Modelo B</h3>
-        <p>Descripción breve del Modelo B.</p>
-        <a href="product-detail.html?id=2">Ver más</a>
-      </article>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Teléfonos de Segunda Mano. Todos los derechos reservados.</p>
-  </footer>
-  <script src="js/script.js"></script>
+
+    <footer>
+        <p class="footer-text">© 2025 Tienda de Celulares</p>
+    </footer>
 </body>
 </html>
