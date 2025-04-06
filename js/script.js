@@ -1,64 +1,85 @@
 /* Aqui iran las funciones de la pagina */
+
 document.addEventListener("DOMContentLoaded", () => {
-    // Validación de formularios
-    const forms = document.querySelectorAll("form");
-    forms.forEach(form => {
-        form.addEventListener("submit", (event) => {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                form.querySelectorAll(":invalid").forEach(input => {
-                    input.classList.add("error");
-                    input.setCustomValidity("Este campo es obligatorio.");
-                });
-            }
-        });
 
-        form.addEventListener("input", (event) => {
-            const input = event.target;
-            if (input.validity.valid) {
+    // Función para validar formularios
+    function validateForm(form) {
+        let isValid = true;
+        const inputs = form.querySelectorAll("input, textarea");
+
+        inputs.forEach(input => {
+            if (input.hasAttribute("required") && input.value.trim() === "") {
+                isValid = false;
+                input.classList.add("error");
+            } else {
                 input.classList.remove("error");
-                input.setCustomValidity("");
             }
         });
-    });
 
-    // Menú desplegable
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-    
-    if (menuToggle && menu) {
-        menuToggle.addEventListener("click", () => {
-            const isActive = menu.classList.toggle("active");
-            menuToggle.setAttribute("aria-expanded", isActive);
+        return isValid;
+    }
+
+    const loginForm = document.querySelector(".login-form");
+    if (loginForm) {
+        loginForm.addEventListener("submit", function(event) {
+            if (!validateForm(this)) {
+                event.preventDefault(); 
+                alert("Por favor, complete todos los campos obligatorios.");
+            }
         });
     }
 
-    // Filtros de catálogo
-    const filtros = document.querySelectorAll(".filtro");
-    const productos = document.querySelectorAll(".producto");
-    
-    filtros.forEach(filtro => {
-        filtro.addEventListener("change", () => {
-            const categoriaSeleccionada = document.querySelector(".filtro:checked").value;
-            
-            productos.forEach(producto => {
-                producto.classList.toggle(
-                    "hidden",
-                    categoriaSeleccionada !== "todos" && producto.dataset.categoria !== categoriaSeleccionada
-                );
+    const contactForm = document.querySelector(".contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(event) {
+            if (!validateForm(this)) {
+                event.preventDefault(); 
+                alert("Por favor, complete todos los campos obligatorios.");
+            }
+        });
+    }
+
+    const nav = document.querySelector("nav");
+    if (nav) {
+        nav.addEventListener("click", function(event) {
+            if (event.target.tagName !== 'A') {
+                nav.classList.toggle("active"); 
+            }
+        });
+    }
+
+    const productContainer = document.querySelector(".product-container");
+    if (productContainer) {
+        const filterSelect = document.createElement("select");
+        filterSelect.innerHTML = `
+            <option value="all">Todos</option>
+            <option value="samsung">Samsung</option>
+            <option value="iphone">iPhone</option>
+            <option value="pixel">Pixel</option>
+        `;
+        productContainer.parentNode.insertBefore(filterSelect, productContainer);
+
+        filterSelect.addEventListener("change", function() {
+            const selectedValue = this.value;
+            const productCards = productContainer.querySelectorAll(".product-card");
+
+            productCards.forEach(card => {
+                const productName = card.querySelector(".product-name").textContent.toLowerCase();
+                if (selectedValue === "all" || productName.includes(selectedValue)) {
+                    card.style.display = "block"; 
+                } else {
+                    card.style.display = "none";
+                }
             });
+        });
+    }
+
+    const productCards = document.querySelectorAll(".product-card");
+    productCards.forEach(card => {
+        card.addEventListener("click", function() {
+            this.classList.toggle("expanded"); 
         });
     });
 
-    // Mostrar/ocultar contenido
-    const botonesMostrar = document.querySelectorAll(".mostrar-detalles");
-    botonesMostrar.forEach(boton => {
-        boton.addEventListener("click", () => {
-            const detalles = boton.nextElementSibling;
-            if (detalles) {
-                detalles.classList.toggle("visible");
-            }
-        });
-    });
 });
 
