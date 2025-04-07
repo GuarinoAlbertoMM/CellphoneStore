@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos</title>
+  <style>
+    /* Reset y configuración base */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0fdf4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    /* Encabezado */
+    header {
+      background: linear-gradient(90deg, #0f766e, #14b8a6);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    /* Navegación */
+    nav {
+      background-color: #0f766e;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 50px;
+    }
+    
+    nav h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: white;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #0f766e;
+      background-color: #f0fdf4;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    /* Contenedor principal que se expande */
+    main {
+      flex: 1;
+    }
+    
+    /* Sección del catálogo */
+    .catalog-section {
+      padding: 40px 20px;
+    }
+    
+    /* Opcional: Si la intención del contenedor es envolver el grid, se elimina la restricción de 200px */
+    .container-seccion-catalogo {
+      width: 100%;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    
+    /* Contenedor de productos */
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 25px;
+    }
+    
+    /* Tarjeta de producto */
+    .product-card {
+        padding: 7px;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-image {
+      width: 100%;
+      height: 180px;
+      padding: 5px;
+      object-fit: cover;
+    }
+    
+    /* Info del producto */
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .product-name {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+      color: #111;
+    }
+    
+    .product-description {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    
+    .product-price {
+      font-size: 1.4rem;
+      color: #28a745;
+      font-weight: bold;
+    }
+    
+    /* Pie de página */
+    footer {
+      background: linear-gradient(90deg, #0f766e, #14b8a6);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .section-title {
+        font-size: 1.4rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Catálogo de Celulares</h1>
+    <div>
+      <a href="index.html">Inicio</a>
+      <a href="catalog.html">Catálogo</a>
+      <a href="contact-seller.html">Contacto Vendedor</a>
+      <a href="login.html">Iniciar Sesión</a>
+    </div>
+  </nav>
+  
+  <main>
+    <section class="catalog-section">
+      <h2 class="section-title">Nuestros Productos</h2>
+      <div class="container-seccion-catalogo">
+        <div class="product-container">
+          <div class="product-card">
+            <img src="/img/galaxys24.jpg" alt="Producto" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">Samsung Galaxy S24</h3>
+              <p class="product-description">Descripción del producto.</p>
+              <p class="product-price">$39,999.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="/img/galaxys24-ultra.jpg" alt="Producto" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">Samsung Galaxy S24 Ultra</h3>
+              <p class="product-description">Descripción del producto.</p>
+              <p class="product-price">$59,999.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="/img/iphone15.jpg" alt="Producto" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">IPhone 15</h3>
+              <p class="product-description">Descripción del producto.</p>
+              <p class="product-price">$49,999.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="/img/iphone15-promax.jpg" alt="Producto" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">IPhone 15 Pro Max</h3>
+              <p class="product-description">Descripción del producto.</p>
+              <p class="product-price">$69,999.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="/img/pixel7pro.jpeg" alt="Producto" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">Pixel 7 Pro</h3>
+              <p class="product-description">Descripción del producto.</p>
+              <p class="product-price">$59,999.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Tienda de Celulares</p>
+  </footer>
+  <script src="/CellphoneStore/js/script.js"></script>
+</body>
+</html>

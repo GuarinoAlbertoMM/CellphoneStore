@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Tienda de Celulares</title>
+    <style>
+        :root {
+            --primary-color: #0f766e;
+            --secondary-color: #14b8a6;
+            --background: #f0fdf4;
+            --text-dark: #1e293b;
+            --text-light: #94a3b8;
+            --card-bg: #ffffff;
+            --accent: #f0fdf4;
+        }
+
+        body {
+            font-family: 'Rooto', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-dark);
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 30px;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.5rem;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #0f766e;
+            background-color: var(--accent);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .product-section {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+
+        .product-info {
+            padding: 1rem;
+            text-align: center;
+            flex: 1;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .product-price {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-text {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .product-card img {
+                aspect-ratio: 4 / 3;
+            }
+
+            .product-price {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="header-title">Tienda de Celulares</h1>
+            <div>
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="catalog.html" class="nav-link">Productos</a>
+                <a href="product-detail.html" class="nav-link">Detalles del producto</a>
+                <a href="profile.html" class="nav-link">Perfil</a>
+                <a href="contact-seller.html" class="nav-link">Contacto</a>
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="productos" class="product-section">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="/img/galaxys24.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Samsung Galaxy S24</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$39,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/galaxys24-ultra.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Samsung Galaxy S24 Ultra</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$59,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/iphone15.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">IPhone 15</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$49,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/iphone15-promax.jpg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">IPhone 15 Pro Max</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$69,999.99</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/pixel7pro.jpeg" alt="Producto" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Pixel 7 Pro</h3>
+                    <p class="product-description">Descripción del producto.</p>
+                    <p class="product-price">$59,999.99</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p class="footer-text">© 2025 Tienda de Celulares</p>
+    </footer>
+    <script src="/CellphoneStore/js/script.js"></script>
+</body>
+
+</html>
