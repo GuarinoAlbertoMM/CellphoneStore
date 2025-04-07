@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactar Vendedor</title>
+    <link rel="stylesheet" type="text/css" href="..\CSS\stylecontacto.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto con el Vendedor</h1>
+    </header>
+
+    <nav>
+        <a href="index.php">Inicio</a>
+        <a href="catalog.html">Productos</a>
+        <a href="contact-seller.html">Contacto</a>
+        <a href="register.html" class="nav-link">Registro</a>
+        <a href="login.html">Iniciar Sesión</a>
+    </nav>
+
+    <section class="contact-form-section">
+        <h2 class="form-title">Envíanos un mensaje</h2>
+        <form class="contact-form" action="http://localhost/TiendaCelulares/PHP/send_message.php" method="POST">
+            <input type="text" name="sender_name" placeholder="Tu Nombre" required>
+            <input type="email" name="sender_email" placeholder="Tu Correo Electrónico" required>
+            <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p class="footer-text">© 2025 Tienda de Celulares</p>
+    </footer>
+</body>
+</html>
